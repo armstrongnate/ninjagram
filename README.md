@@ -88,6 +88,15 @@ end
 <% end %>
 ```
 
+#### Default Url
+
+```ruby
+# app/uploaders/attachment_uploader.rb
+def default_url
+  ActionController::Base.helpers.asset_path('default.png')
+end
+```
+
 #### If you're getting errors in the console
 
 Rails was not requiring my uploads directory so I had to tell it to do so manually.
