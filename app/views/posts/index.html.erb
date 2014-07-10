@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <div class='post'>
+    <%= image_tag post.attachment_url %>
+  </div>
+<% end %>
+
+<%= form_for Post.new, html: { multipart: true } do |f| %>
+  <%= f.file_field :attachment %>
+  <%= f.submit 'Submit' %>
+<% end %>
